@@ -44,14 +44,14 @@ while len(guessed_states) < 29:
         write_name_on_map(useranswer= user_answers, xcor= new_x, ycor= new_y)
         
 
-#Create datafrme csv for non guessed states
+#Create dataframe csv for non guessed states
 not_guessed_states = []
 for state in state_names:
     if state not in guessed_states:
         not_guessed_states.append(state)
 
 df = pandas.DataFrame(not_guessed_states)
-df.to_html('notguessed.html')
+df.to_csv('notguessed.csv')
 
 
 
